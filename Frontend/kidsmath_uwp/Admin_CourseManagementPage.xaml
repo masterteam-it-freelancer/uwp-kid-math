@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="kidsmath_uwp.Admin_CourseManagementLoaded"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="92*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Grid Height="20"/>
+            <StackPanel  Orientation="Horizontal">
+                <TextBlock Text="Khóa học"
+                       VerticalAlignment="Center"
+                       FontSize="30"/>
+                <Grid Width="10"/>
+                <TextBlock Name="soluongkh"
+                       VerticalAlignment="Center"
+                       FontSize="30"
+                       Foreground="#0073aa"
+                       FontWeight="Bold" />
+                <Grid Width="831"/>
+                <AutoSuggestBox  Width="465" Height="45"/>
+                <Button Height="45" Width="45">
+                    <TextBlock FontFamily="Segoe MDL2 Assets" 
+                               Text="&#xE094;" 
+                               Foreground="White"
+                               FontWeight="Thin"/>
+                </Button>
+            </StackPanel>
+            <Grid Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Grid Height="20"/>
+            <StackPanel Orientation="Horizontal" Height="35">
+
+                <Grid Width="10"/>
+                <Button Content="Thêm khóa học"
+                            FontSize="20" Height="45"
+                        IsEnabled="False"/>
+
+                <Grid Width="10"/>
+                <Button Content="Làm mới"
+                        Click="refesh_page"
+                        FontSize="20" Height="45"/>
+
+                <Grid Width="10"/>
+                <Button Content="Chỉnh sửa"
+                            FontSize="20"
+                        Click="show_msg"/>
+                <Grid Width="838"/>
+               
+            </StackPanel>
+            <Grid Height="25"/>
+        </StackPanel>
+        <GridView Name="gvdsachKhoaHoc"
+                 Grid.Row="2" Margin="10,0,0,0"
+                  Background="WhiteSmoke">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="1200" Height="180" Orientation="Horizontal">
+                        <Image Height="160" Width="240"
+                               HorizontalAlignment="Center"
+                               Source="{Binding imagelink}"/>
+                        <Grid Width="20"/>
+                        <StackPanel >
+                            <TextBlock Name="txtblock_tenKhoaHoc"
+                                        Text="{Binding tenKhoaHoc}"
+                                       FontSize="20"
+                                       FontWeight="Bold"/>
+                            <TextBlock Text="52 bài giảng"/>
+                            <TextBlock Text="{Binding giaKhoaHoc}"/>
+                            <TextBlock Text="{Binding giaKhuyenMai}"/>
+                            <TextBlock Text="{Binding thoiGianKhuyenMai}"/>
+                            <Grid Height="20"/>
+                            <StackPanel Orientation="Horizontal">
+                                <Grid Width="10"/>
+                                <Button Content="Xóa khóa học"
+                                        FontSize="15"/>
+                                <Grid Width="10"/>
+                                <Button Content="Chỉnh sửa"
+                                        Click="Click_Chinhsuakhoahoc"
+                                        FontSize="15"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <Grid Width="400"/>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

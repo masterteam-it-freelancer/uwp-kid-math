@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="kidsmath_uwp.MainForum"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+
+        <Grid  >
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets\backgr.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="46*"/>
+                <ColumnDefinition Width="202*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="133*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1">
+                <Grid Height="20"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Trở về Trang chủ" Width="500"
+                            Foreground="CornflowerBlue"
+                            Click="trangchu"/>
+                    <Button Content="Trang cá nhân" Width="500"
+                            Click="trangcanhan"
+                            Background="CornflowerBlue"
+                            Foreground="White"/>
+                </StackPanel>
+                <Button Content="Đăng bài" Width="1000"
+                        FontWeight="SemiBold"
+                        Background="DarkSeaGreen"
+                        Foreground="White"
+                        Click="dangbai"/>
+                <Grid Height="20"/>
+                <GridView Name="grview_dsbinhluan" Background="WhiteSmoke" Height="878" Width="1000">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="120" Background="White" Orientation="Horizontal"
+                            IsTapEnabled="True"
+                            Tapped="navigateto_baiviet"
+                            Width="1000">
+
+                                <Image Width="112" Height="105"/>
+                                <Grid Width ="20"/>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding tenNguoiDung}"
+                                       Foreground="CornflowerBlue"
+                                       FontSize="18"/>
+                                        <Grid Width="10"/>
+                                        <TextBlock Text="{Binding ngayDuyet}"
+                                       FontSize="15" Height="19"
+                                       Foreground="DarkGray"/>
+                                    </StackPanel>
+                                    <Grid Height="10"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding tieuDe}"
+                                       FontSize ="20"
+                                       FontWeight="SemiBold"/>
+                                        <Grid Width ="20"/>
+                                        <Button Content="{Binding tag}"
+                                    Opacity="0.7"
+                                    FontSize="8" Height="22" Width="44"
+                                    Click="timkhoacungtag"/>
+                                    </StackPanel>
+                                    <Grid Height="10"/>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE18B;" 
+                                       Foreground="DarkGray" FontWeight="Thin"
+                                      VerticalAlignment="Center"/>
+                                        <Grid Width ="7"/>
+                                        <TextBlock Text="{Binding luotxem}"
+                                                  />
+                                        <Grid Width="10"/>
+                                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8BD;" 
+                                       Foreground="DarkGray" FontWeight="Thin"
+                                       VerticalAlignment="Center"/>
+                                        <Grid Width ="7"/>
+                                        <TextBlock Text="{Binding luotbinhluan}"
+                                                   />
+                                    </StackPanel>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="3">
+                <StackPanel Height="50" Orientation="Horizontal" >
+                    <Grid Width="20"/>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE12A;" 
+                               Foreground="Black" FontWeight="Thin"
+                               VerticalAlignment="Center"
+                               FontSize="30"/>
+                    <Grid Width="10"/>
+                    <TextBlock Text="Những bài viết nhiều lượt truy cập:"
+                               FontSize="20"  FontWeight="Bold" Height="33"/>
+                </StackPanel>
+                <GridView Name="grview_dsbinhluanmoinhat" Background="WhiteSmoke" 
+                     >
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+
+                            <StackPanel Height="120" Background="White" Orientation="Horizontal"
+                                        Width="700">
+                                <Grid Width ="20"/>
+                                <StackPanel IsTapEnabled="True" Tapped="navigateto_baiviet">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding tieuDe}"
+                                       FontSize ="20"
+                                       FontWeight="SemiBold"/>
+                                        <Grid Width ="20"/>
+                                    </StackPanel>
+                                    <Grid Height="10"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE18B;" 
+                                       Foreground="DarkGray" FontWeight="Thin"
+                                       VerticalAlignment="Center"/>
+                                        <Grid Width ="7"/>
+                                        <TextBlock Text="{Binding luotxem}"/>
+                                        <Grid Width="10"/>
+                                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8BD;" 
+                                       Foreground="DarkGray" FontWeight="Thin"
+                                       VerticalAlignment="Center"/>
+                                        <Grid Width ="7"/>
+                                        <TextBlock Text="{Binding luotbinhluan}"/>
+                                    </StackPanel>
+                                    <Grid Height="10"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{ Binding tenNguoiDung}"
+                                       Foreground="CornflowerBlue"
+                                       FontSize="18"/>
+                                        <Grid Width="10"/>
+                                        <TextBlock Text="{Binding ngayDuyet}"
+                                       FontSize="15" Height="19"
+                                       Foreground="DarkGray"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+
+                </GridView>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Page>

@@ -1,0 +1,289 @@
+﻿<Page
+    x:Class="kidsmath_uwp.BaithiPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets\baithibackground.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="268*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Margin="0,0,5,0">
+
+            <StackPanel Orientation="Horizontal" Margin="-5,15,11,0">
+                <Grid Width="35"/>
+                <StackPanel>
+                    <Grid Height="10"/>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE823;" 
+                                   Foreground="Black" FontWeight="ExtraBold"
+                                   FontSize="50" />
+                </StackPanel>
+                <Grid Width="10"/>
+                <TextBlock x:Name="Thoigianthiconlai_phut"
+                           FontSize="50"
+                           FontWeight="ExtraBold" />
+                <TextBlock Name="txtblock_character"
+                           Text="01 :0"
+                           FontSize="50"
+                           FontWeight="ExtraBold"  />
+                <TextBlock x:Name="Thoigianthiconlai_giay"
+                           FontSize="50"
+                           FontWeight="ExtraBold" />
+
+
+            </StackPanel>
+            <Button Height="76" Width="240" Margin="5,190,0,0" VerticalAlignment="Top"
+                    Click="btnbatdauthi_Click"
+                    Name="btn_batdauthi"
+                    IsEnabled="True" RenderTransformOrigin="0.583,-0.579">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Baithi\batdauthi.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="90" Width="225"
+                    Margin="20,380,0,0" VerticalAlignment="Top"
+                    Click="btnclick_nopbaithi"
+                    Name="Nopbaithi">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Baithi\nopbaithi.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="85" Width="240" Margin="15,285,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.933"
+                    Name="btntamdung"
+                    Click="btntamdung_click"
+                    IsEnabled="False">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Baithi\tamdung.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+
+        </Grid>
+        <StackPanel Grid.Column="1" >
+            <Button Height="75" Width="80" 
+                    Name="bt1"
+                    Click="btn1_click"
+                    >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_1.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80"
+                    Name="bt2"
+                    Click="btn2_click" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_2.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80" 
+                    Name="bt3"
+                    Click="btn3_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_3.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80"
+                    Name="bt4"
+                    Click="btn4_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_4.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80"
+                    Name="bt5"
+                    Click="btn5_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_5.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80" 
+                    Name="bt6"
+                    Click="btn6_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_6.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80"
+                    Name="bt7"
+                    Click="btn7_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_7.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80" 
+                    Name="bt8"
+                    Click="btn8_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_8.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Height="75" Width="80"
+                    Name="bt9"
+                    Click="btn9_click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Assets\Numbertest\button_9.png" Stretch="UniformToFill"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+        <Frame Grid.Column="2" Name="Baithimain"></Frame>
+        <Grid Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Height="Auto">
+                <Grid Width="65"/>
+                <TextBlock  Name="txtblock_Cauhoi"
+                       Text="{Binding tenCauHoi}" Width="810"
+                     
+                       FontSize="40"
+                       FontWeight="SemiBold"
+                       TextWrapping="Wrap"/>
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Height="Auto">
+                <RadioButton HorizontalAlignment="Center"
+                                  FontSize="30" GroupName="4dapan"
+                                  Checked="dapanA"
+                                     Name="namedapanA"
+                                     Visibility="Collapsed"
+                                  />
+                <Grid Width="02"/>
+                <TextBlock Text="A."
+                           Name="daa"
+                           FontSize="30"
+                           FontWeight="SemiBold"
+                           Visibility="Collapsed"/>
+                <TextBlock Text="{Binding A}"
+                           Name="txtblock_A"
+                           HorizontalAlignment="Center"
+                           FontSize="30"
+                           FontWeight="SemiBold"
+                           TextWrapping="Wrap"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Height="Auto">
+                <RadioButton HorizontalAlignment="Center" GroupName="4dapan"
+                             FontSize="30"
+                             Checked="dapanB"
+                             Name="namedapanB"
+                             Visibility="Collapsed"/>
+                <Grid Width="2"/>
+                <TextBlock Text="B."
+                           FontSize="30"
+                           FontWeight="SemiBold"
+                           Visibility="Collapsed"
+                           Name="dab"/>
+                <TextBlock Text="{Binding B}"
+                                   Name="txtblock_B"
+                                   HorizontalAlignment="Center"
+                                   FontSize="30"
+                                   FontWeight="SemiBold"
+                                   TextWrapping="Wrap"/>
+                <Grid Height="20"/>
+
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Orientation="Horizontal" Height="Auto">
+                <RadioButton HorizontalAlignment="Center"
+                             FontSize="30" GroupName="4dapan"
+                             Checked="dapanC"
+                             Name="namedapanC"
+                             Visibility="Collapsed"/>
+                <Grid Width="2"/>
+                <TextBlock Text="C."
+                           FontSize="30"
+                           FontWeight="SemiBold"
+                           Visibility="Collapsed"
+                           Name="dac"/>
+
+                <TextBlock Text="{Binding C}"
+                                   Name="txtblock_C"
+                                   HorizontalAlignment="Center"
+                                   FontSize="30"
+                                   FontWeight="SemiBold"
+                                   TextWrapping="Wrap"/>
+                <Grid Height="20"/>
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="4" Orientation="Horizontal" Height="Auto">
+                <RadioButton HorizontalAlignment="Center"
+                             FontSize="30"
+                             Checked="dapanD" GroupName="4dapan"
+                             Name="namedapanD"
+                             Visibility="Collapsed"/>
+                <Grid Width="2"/>
+                <TextBlock Text="D. "
+                           FontSize="30"
+                           FontWeight="SemiBold"
+                           Visibility="Collapsed"
+                           Name="dad"/>
+
+                <TextBlock Text="{Binding D}"
+                                   Name="txtblock_D"
+                                   HorizontalAlignment="Center"
+                                   FontSize="30"
+                                   FontWeight="SemiBold"
+                                   TextWrapping="Wrap"/>
+
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Page>

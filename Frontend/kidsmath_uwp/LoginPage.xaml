@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="kidsmath_uwp.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets\backgr.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="270*"/>
+                <ColumnDefinition Width="105*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="0,0,10,0">
+                <TextBox Name="Txtbox_Username" PlaceholderText="Điền tên tài khoản" FontSize="30"/>
+                <PasswordBox Name="Passwdbox_Password" PlaceholderText="Điền mật khẩu" FontSize="30"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Đăng nhập" Click="Btn_Dangnhap_Click" FontSize="30"/>
+                    <Grid Width="10"/>
+                    <Button Content="Đăng ký" Click="Btn_Dangky_Click" FontSize="30"/>
+                    <Grid Width="10"/>
+                    <Button Content="Trở về trang chủ" Click="Btn_Trovetrangchu_Click" FontSize="30"/>
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

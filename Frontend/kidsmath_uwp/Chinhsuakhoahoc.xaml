@@ -1,0 +1,234 @@
+﻿<Page
+    x:Class="kidsmath_uwp.Chinhsuakhoahoc"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="125*"/>
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Grid Height="20"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Width="145" Background="WhiteSmoke" Name="btn_backtoadmainmenu"  
+                                    HorizontalContentAlignment="Left" Height="43"
+                                    Click="btnclick_adpage_backtomainmenu">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE112;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                        <TextBlock Text=" Quay lại" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                    </StackPanel>
+                </Button>
+                <Grid Width="15"/>
+                <Button Width="370" Background="WhiteSmoke" Name="btn_Thongtinkhoahoc"  
+                                HorizontalContentAlignment="Left" Height="43">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEC87;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                        <TextBlock Text="  Thông tin khóa học" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                    </StackPanel>
+                </Button>
+                <Grid Width="1260"/>
+            </StackPanel>
+            <Grid Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Grid Height="20"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Name="txtblock_adpage_tenkhoahoc"
+                                        Text="{Binding tenKhoaHoc}"
+                                        FontSize="30"
+                                        FontWeight="Bold"
+                                        Width="1105"/>
+                <Grid Width="15"/>
+                <Button Content="Hủy" Click="btnclick_huychinhsua"
+                                    Background="WhiteSmoke"
+                                    Foreground="Black"
+                                    FontSize="20"
+                                    FontWeight="Bold"/>
+                <Grid Width="10"/>
+                <Button Content="Lưu thay đổi"
+                        Click="btnclick_luuchinhsuakhoahoc"
+                                    Background="#0073aa"
+                                    Foreground="White"
+                                    FontSize="20"
+                                    FontWeight="Bold"/>
+                <Grid Width="10"/>
+                <Button Content="Chỉnh sửa nội dung"
+                        Click="btnclick_suanoidungkhoahoc"
+                                    Background="#0073aa"
+                                    Foreground="White"
+                                    FontSize="20"
+                                    FontWeight="Bold"/>
+            </StackPanel>
+            <Grid Height="20"/>
+        </StackPanel>
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="91*"/>
+                <ColumnDefinition Width="101*"/>
+            </Grid.ColumnDefinitions>
+            <Image Name="course_img" Grid.Column="0" Stretch="Fill" Source="{Binding imagelink}" Margin="0,6,30,344"/>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="44*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" >
+                        <TextBlock Text="THÔNG TIN KHÓA HỌC"
+                                               FontSize="10"
+                                               FontWeight="Bold" Height="31"/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Thông tin mã KH:"/>
+                            <Grid Width="62"/>
+                            <TextBox Name="txtblock_maKhoaHoc"
+                                                 BorderThickness="0" Text="{Binding maKhoaHoc}" Width="360"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Thông tin mã lớp:"/>
+                            <Grid Width="60"/>
+                            <TextBox Name="txtblock_maLop"
+                                                 BorderThickness="0" Text="{Binding maLop}" Width="358"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Giảng viên:"/>
+                            <Grid Width="101"/>
+                            <TextBox Name="txtblock_tenGiaoVien"
+                                                 BorderThickness="0" Text="{Binding tenGiaoVien}" Width="338"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Giá khóa học:"/>
+                            <Grid Width="86"/>
+                            <TextBox Name="txtblock_giaKhoaHoc"
+                                                 BorderThickness="0" Text="{Binding giaKhoaHoc}" Width="334"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Giá khuyến mãi:"/>
+                            <Grid Width="71"/>
+                            <TextBox Name="txtblock_giaKhuyenMai"
+                                                 BorderThickness="0" Text="{Binding giaKhuyenMai}" Width="357"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Thông tin khuyến mãi:"/>
+                            <Grid Width="32">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="17*"/>
+                                    <ColumnDefinition Width="15*"/>
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+                            <TextBox Name="txtblock_thoiGianKhuyenMai"
+                                                 BorderThickness="0" Text="{Binding thoiGianKhuyenmai}" Width="349"/>
+                        </StackPanel>
+
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="ImageLink:"/>
+                            <Grid Width="103"/>
+                            <TextBox Name="txtblock_ImageLink"
+                                                 BorderThickness="0" Text="{Binding imagelink}" Width="355"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Height="30">
+                            <TextBlock Text="Số lượng bài giảng:"/>
+                            <Grid Width="15"/>
+                            <Button  Background="White" Name="btn_soluongbaigiang"  
+                                                 HorizontalContentAlignment="Left" Height="29" Width="35">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEDA4;" 
+                                                       Foreground="Black" FontWeight="Thin"
+                                                       FontSize="15" VerticalAlignment="Center"/>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Số người đã mua:"/>
+                            <Grid Width="26"/>
+                            <Button  Background="White" Name="btn_songuoidamua"  
+                                                 HorizontalContentAlignment="Left" Height="29" Width="35">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xECA7;" 
+                                                       Foreground="Black" FontWeight="Thin"
+                                                       FontSize="15" VerticalAlignment="Top" Margin="0,-7,0,0"/>
+                            </Button>
+                            <TextBox Name="txtblock_soNguoiDaMua"
+                                                 BorderThickness="0" Text="{Binding soNguoiDaMua}" Width="375"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Đánh giá trung bình:"/>
+                            <Grid Width="7"/>
+                            <Button  Background="White" Name="btn_danhgiatrungbinh"  
+                                                 HorizontalContentAlignment="Left" Height="29" Width="35">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE9D9;" 
+                                                       Foreground="Black" FontWeight="Thin"
+                                                       FontSize="15" VerticalAlignment="Top" Margin="0,-7,0,0"/>
+                            </Button>
+                            <TextBox Name="txtblock_danhGiaTrungBinh"
+                                                 BorderThickness="0" Text="{Binding danhGiaTrungBinh}" Width="375"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Số lượng đánh giá:" />
+                            <Grid Width="18"/>
+                            <Button  Background="White"   
+                                HorizontalContentAlignment="Left" Height="29" Width="35">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xED15;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="15" VerticalAlignment="Top" Margin="0,-7,0,0"/>
+                            </Button>
+                            <TextBox Name="btn_soLuongDanhGia"
+                                     BorderThickness="0" Text="{Binding soLuongDanhGia}" Width="375"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <StackPanel Grid.Column="1" Margin="0,0,75,-97">
+                        <TextBlock Text="CẢNH BÁO! "
+                                   FontSize="10"
+                                   FontWeight="Bold"/>
+                        <TextBlock Text="Nội dung bạn đã chỉnh sửa sẽ không thể khôi phục.                                     Hãy sao lưu dữ liệu trước khi xóa hoặc chỉnh sửa                                    Đọc kỹ phần Hướng dẫn trước khi thực hiện thao tác                                    Liên hệ Admin qua email để được giúp đỡ"
+                                   FontSize="18"
+                                   FontWeight="Thin" Width="260" TextWrapping="Wrap" Height="279"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1" >
+                    <TextBox Name="txtbox_thongTinKhoaHoc"
+                                           Text="{Binding thongTinKhoaHoc}"
+                                           FontSize="15"
+                                           TextWrapping="Wrap" Margin="0,4,0,0"/>
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+
+</Page>

@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="kidsmath_uwp.RegistryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+         <Grid.Background>
+                <ImageBrush ImageSource="Assets\backgr.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <StackPanel VerticalAlignment="Top" Orientation="Vertical"
+                            HorizontalAlignment="Center" Width="601" Height="565">
+                    <TextBlock Text="Đăng ký thành viên"
+                           FontSize="30"
+                           FontFamily="Arial"
+                           HorizontalAlignment="Center"/>
+                    <TextBox PlaceholderText="Họ và tên" 
+                             FontSize="25"
+                             Name="txtbox_hovaten"/>
+                    <TextBox PlaceholderText="Nhập tên tài khoản"
+                             Name="txtbox_username"
+                             FontSize="25"/>
+                    <TextBox PlaceholderText="Nhập SĐT"
+                             FontSize="25"
+                             Name="txtbox_sdt"/>
+                    <TextBox PlaceholderText="Nhập Email"
+                             FontSize="25"
+                             Name="txtbox_email"/>
+                    <PasswordBox PlaceholderText="Nhập mật khẩu"
+                                 FontSize="25"
+                                 Name="passwdbox_matkhau"/>
+                    <PasswordBox PlaceholderText="Xác nhận mật khẩu"
+                                 FontSize="25"
+                                 Name="passwdbox_xacnhanmatkhau"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Đăng ký"
+                                FontSize="25"
+                                Click="click_hoanthanhdangky"/>
+                        <Grid Width="9"/>
+                        <Button Content="Đăng nhập"
+                                FontSize="25"
+                                Click="dangnhap_click"/>
+                        <Grid Width="173"/>
+                        <Button Content="Về Trang chủ"
+                                FontSize="25"
+                                Click="vetrangchu_click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

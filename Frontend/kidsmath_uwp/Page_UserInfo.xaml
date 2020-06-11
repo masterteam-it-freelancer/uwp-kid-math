@@ -1,0 +1,477 @@
+﻿<Page
+    x:Class="kidsmath_uwp.Page_UserInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
+        <Grid Height="2000" >
+
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets\backgr.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="41*"/>
+                <RowDefinition Height="130*"/>
+            </Grid.RowDefinitions>
+            <StackPanel  Orientation="Horizontal">
+
+
+                <Grid Width="615"/>
+                <StackPanel Width="700">
+                    <Image Source="Assets\usericon.png" Stretch="Fill" Height="195" Width="189"/>
+                    <TextBlock x:Name="txtblock_userloginedname" 
+                               Text="{Binding tenNguoiDung}"
+                               HorizontalAlignment="Center"
+                               FontSize="30"
+                               FontWeight="Bold"  />
+                </StackPanel>
+                <Grid Width="855"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  Grid.Row="1" Grid.RowSpan="2">
+                <Grid Width="185"/>
+                <StackPanel Width="1550">
+                    <StackPanel >
+                        <!--Thông tin cá nhân-->
+                        <Grid Height="400">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="360"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Width="100" Background="#1f1f1f" Name="btn_MainMenu" Click="btnclick_MainMenu" 
+                                        HorizontalContentAlignment="Left" Height="59">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" 
+                                                   Foreground="White" FontWeight="Thin"
+                                                   />
+
+                                    </StackPanel>
+                                </Button>
+                                <Grid Width ="11"/>
+                                <TextBlock
+                                    Text="Thông tin cá nhân"
+                                    FontSize="30"
+                                    FontWeight="Bold" Width="305"/>
+                                <Grid Width ="10"/>
+                                <Button  Click ="chinhsuathongtin"
+                                         Name="suathongtin">
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEC88;" 
+                                               Foreground="Black" FontWeight="Thin"
+                                               FontSize="30" VerticalAlignment="Center"
+                                              />
+                                </Button>
+                                <Button  Click ="huychinhsuathongtin"
+                                         Name="huysuathongtin"
+                                         Visibility="Collapsed">
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEF2C;" 
+                                               Foreground="Black" FontWeight="Thin"
+                                               FontSize="30" VerticalAlignment="Center"
+                                    />
+                                </Button>
+                                <Button  Click ="luuchinhsuathongtin"
+                                         Name="luuthongtin"
+                                         Visibility="Collapsed">
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE74E;" 
+                                               Foreground="Black" FontWeight="Thin"
+                                               FontSize="30" VerticalAlignment="Center"
+                                    />
+                                </Button>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="1" Background="White" Margin="0,0,0,-21" >
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE2AF;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="25" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Username:" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                                    <Grid Width="10"/>
+                                    <TextBox Name="txtblock_username"
+                                               Text="{Binding username}" 
+                                               Foreground="Black" FontWeight="Bold"
+                                               FontSize="20"
+                                               BorderThickness="0"
+                                               IsEnabled="False"/>
+                                </StackPanel>
+                                <Grid Height="20"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE192;" 
+                                               Foreground="Black" FontWeight="Thin"
+                                               FontSize="25" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Mật khẩu:" Margin="7,0,0,0"
+                                               VerticalAlignment="Center" 
+                                               Foreground="Black" FontWeight="Bold"
+                                               FontSize="20"/>
+                                    <Grid Width="10"/>
+                                    <TextBox Name="txtblock_password"
+                                             PlaceholderText="******" 
+                                             Foreground="Black" FontWeight="Bold"
+                                             FontSize="20"
+                                             BorderThickness="0"
+                                             IsEnabled="False"
+                                             />
+                                    <Grid Width="10"/>
+
+                                    <TextBox Name="passwdbox_xacnhanmatkhau"
+                                             PlaceholderText="Nhập lại mật khẩu mới" 
+                                             Foreground="Black" FontWeight="Bold"
+                                             FontSize="20"
+                                             BorderThickness="0"
+                                             IsEnabled="False"
+                                             Visibility="Collapsed"/>
+                                </StackPanel>
+                                <Grid Height="20"/>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE136;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Họ và tên:  " Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                                    <Grid Width="10"/>
+                                    <TextBox Name="txtblock_tenNguoiDung"
+                                               Text="{Binding tenNguoiDung}" 
+                                               Foreground="Black" FontWeight="Bold"
+                                               FontSize="20"
+                                               BorderThickness="0"
+                                               IsEnabled="False"/>
+                                </StackPanel>
+                                <Grid Height="20"/>
+
+
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE13A;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Số điện thoại:" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                                    <Grid Width="10"/>
+                                    <TextBox Name="txtblock_soDienThoai"
+                                               Text="{Binding soDienThoai}"
+                                               Foreground="Black" FontWeight="Bold"
+                                               FontSize="20"
+                                               BorderThickness="0"
+                                               IsEnabled="False"/>
+                                </StackPanel>
+                                <Grid Height="20"/>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE715;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Email:" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                                    <Grid Width="10"/>
+                                    <TextBox Name="txtblock_email"
+                                               Text="{Binding email}" 
+                                               Foreground="Black" FontWeight="Bold"
+                                               FontSize="20"
+                                               BorderThickness="0"
+                                               IsEnabled="False"/>
+                                </StackPanel>
+
+
+                                <Grid Height="20"/>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Name="stpn1" >
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE763;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Số tiền đã nạp"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                                    <Grid Width="10"/>
+                                    <TextBlock Width="200" 
+                                        Name="txtblock_soTienDaNap"
+                                               Text="{Binding soTienDaNap}" 
+                                               Foreground="Black" FontWeight="Bold"
+                                               FontSize="20"/>
+                                    <Grid Width="28"/>
+
+                                </StackPanel>
+                                <Grid Height="20"/>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Name="stpn2" >
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE763;" 
+                                   Foreground="Black" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Số dư hiện tại:" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="Black" FontWeight="Bold"
+                                   FontSize="20"/>
+                                    <Grid Width="10"/>
+                                    <TextBlock Width="200" 
+                                        Name="txtblock_soTienHienCo"
+                                               Text="{Binding soTienHienCo}" 
+                                               Foreground="Black" FontWeight="Bold"
+                                               FontSize="20"/>
+                                    <Grid Width="20"/>
+                                    <Button Content="Nạp thêm tiền"
+                                            FontSize="20"
+                                            FontWeight="Bold"
+                                            Name="Napthemtien_userinfopage"
+                                            Click="naptien"/>
+                                </StackPanel>
+                                <Grid Height="20"/>
+
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                    <Grid Height="20"/>
+
+                    <StackPanel>
+                        <!-- Danh sách các khóa học đã mua-->
+                        <Grid Height="400">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="360"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0"
+                               HorizontalAlignment="Center"
+                               Text="Danh sách khóa học"
+                               FontSize="30"
+                               FontWeight="Bold" Width="294"
+                               />
+                            <StackPanel Grid.Row="1" Background="White">
+                                <GridView Grid.Row="4" Name="flipview_dskhoahoc" Background="WhiteSmoke"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollMode="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+            ScrollViewer.VerticalScrollMode="Disabled" Margin="0,6,0,5">
+                                    <GridView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </GridView.ItemsPanel>
+                                    <GridView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ScrollViewer HorizontalScrollMode="Enabled" VerticalScrollBarVisibility="Visible">
+                                                <Border BorderThickness="2" BorderBrush="White" Width="309" Height="394">
+                                                    <StackPanel Orientation="Horizontal" Width="309" Height="394"
+                                    HorizontalAlignment="Center"
+                                    Name="khoahoc_stackpn"
+                                    Tapped="tap_khoahoc"
+                                            IsTapEnabled="True">
+                                                        <StackPanel Height="292" Width="394">
+                                                            <Image Width="390" Height="173" Stretch="UniformToFill"
+                                       Source="{Binding imagelink}"/>
+                                                            <Grid Height="5"/>
+                                                            <TextBlock Width="390" Height="38" 
+                                           TextWrapping="Wrap"
+                                           FontWeight="Bold"
+                                           FontSize="18"
+                                           Text="{Binding tenKhoaHoc}"/>
+                                                            <Grid Height="1"/>
+                                                            <TextBlock Width="390" Height="28" 
+                                           TextWrapping="Wrap"
+                                           FontWeight="Normal"
+                                           FontSize="16"
+                                           Text="{Binding tenGiaoVien}"/>
+                                                            <Grid Height="5"/>
+                                                            <TextBlock Width="390" Height="28" 
+                                           TextWrapping="Wrap"
+                                           FontWeight="Normal"
+                                           FontSize="16"
+                                           Text="{Binding giaKhuyenMaiHienThi}"/>
+                                                            <Grid Height="5"/>
+                                                            <TextBlock Width="390" Height="38" 
+                                           HorizontalAlignment="Right"
+                                           FontWeight="Bold"
+                                           FontSize="25"
+                                           Text="{Binding thoiGianKhuyenMai}"/>
+                                                        </StackPanel>
+                                                        <Grid Width="17" Height="394"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </ScrollViewer>
+                                        </DataTemplate>
+                                    </GridView.ItemTemplate>
+                                </GridView>
+                            </StackPanel>
+                        </Grid>
+
+
+
+                    </StackPanel>
+                    <Grid Height="20"/>
+
+                    <StackPanel>
+                        <!--Lịch sử giao dịch-->
+                        <Grid Height="400" Background="WhiteSmoke">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="360"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0"
+                               HorizontalAlignment="Center"
+                               Text="            Lịch sử nạp tiền"
+                               FontSize="30"
+                               FontWeight="Bold" Width="421"
+                               />
+                            <StackPanel Grid.Row="1" Background="White">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="8*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0">
+                                        <StackPanel>
+                                            <StackPanel Width="1200" Height="80" Orientation="Horizontal" >
+
+                                                <TextBlock 
+                                                               Text="Ngày giao dịch"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"/>
+
+                                                <TextBlock
+                                                               Text="Số tiền"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="180"
+                                                    HorizontalAlignment="Center"/>
+
+                                                <TextBlock 
+                                                               Text="Người thực hiện"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"
+                                                    HorizontalAlignment="Center"/>
+
+
+                                            </StackPanel>
+                                            <Grid Height="20"/>
+                                            <GridView Name="gvlichsunap"                             
+                                               Background="White">
+                                                <GridView.ItemTemplate>
+                                                    <DataTemplate>
+
+                                                        <StackPanel Width="1200" Height="80" Orientation="Horizontal" >
+
+                                                            <TextBlock Name="txtblock_ngaygiaodich"
+                                                               Text="{Binding thoiGianNapXacNhan}"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"/>
+
+                                                            <TextBlock Name="txtblock_sotiengd"
+                                                               Text="{Binding soTienNap}"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="180"
+                                                                       HorizontalAlignment="Center"/>
+
+                                                            <TextBlock Name="txtblock_username"
+                                                               Text="{Binding username}"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"/>
+
+
+                                                        </StackPanel>
+
+                                                    </DataTemplate>
+                                                </GridView.ItemTemplate>
+                                            </GridView>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                    <Grid Grid.Column="1" Background="WhiteSmoke"/>
+                                    <StackPanel Grid.Column="2">
+                                        <StackPanel>
+                                            <StackPanel Width="1200" Height="40" Orientation="Horizontal" >
+
+                                                <TextBlock 
+                                                               Text="Ngày giao dịch"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"/>
+
+                                                <TextBlock
+                                                               Text="Số tiền"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="180"
+                                                    HorizontalAlignment="Center"/>
+
+                                                <TextBlock 
+                                                               Text="Nội dung"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"/>
+
+
+                                            </StackPanel>
+                                            <Grid Height="20"/>
+                                            <GridView Name="gvlichsumua"                             
+                                                    Background="White">
+                                                <GridView.ItemTemplate>
+                                                    <DataTemplate>
+
+                                                        <StackPanel Width="1200" Height="40" Orientation="Horizontal" >
+
+                                                            <TextBlock Name="txtblock_ngaygiaodich"
+                                                               Text="{Binding thoiGianMua}"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"
+                                                                       />
+
+                                                            <TextBlock Name="txtblock_sotiengd"
+                                                                Text="{Binding giaKhoaHoc}"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="180"
+                                                                       HorizontalAlignment="Center"/>
+
+                                                            <TextBlock Name="txtblock_noidung"
+                                                               Text="{Binding maKhoaHoc}"
+                                                               FontSize="20"
+                                                               FontWeight="Bold"
+                                                               Width="300"/>
+
+
+                                                        </StackPanel>
+
+                                                    </DataTemplate>
+                                                </GridView.ItemTemplate>
+                                            </GridView>
+                                        </StackPanel>
+
+                                    </StackPanel>
+
+
+
+                                </Grid>
+                            </StackPanel>
+
+
+                            <Grid Height="20"/>
+                        </Grid>
+                    </StackPanel>
+
+
+                </StackPanel>
+                <Grid Width="100"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+
+</Page>

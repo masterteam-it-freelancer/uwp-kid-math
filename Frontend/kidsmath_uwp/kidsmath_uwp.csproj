@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{283BD7C5-49A4-4635-8AE1-31932C862B0B}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kidsmath_uwp</RootNamespace>
+    <AssemblyName>kidsmath_uwp</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AdminMainPage.xaml.cs">
+      <DependentUpon>AdminMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_CourseManagementPage.xaml.cs">
+      <DependentUpon>Admin_CourseManagementPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_forum.xaml.cs">
+      <DependentUpon>Admin_forum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_MailboxPage.xaml.cs">
+      <DependentUpon>Admin_MailboxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_StatisticalPage.xaml.cs">
+      <DependentUpon>Admin_StatisticalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_UserManagementPage.xaml.cs">
+      <DependentUpon>Admin_UserManagementPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaitapPage.xaml.cs">
+      <DependentUpon>BaitapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaithiPage.xaml.cs">
+      <DependentUpon>BaithiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="binhLuan_Forum.xaml.cs">
+      <DependentUpon>binhLuan_Forum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BuyCoursePage.xaml.cs">
+      <DependentUpon>BuyCoursePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chinhsuakhoahoc.xaml.cs">
+      <DependentUpon>Chinhsuakhoahoc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chinhsuanoidungkhoahoc.xaml.cs">
+      <DependentUpon>Chinhsuanoidungkhoahoc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\GetDatabaseServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Forum_Baiviet.xaml.cs">
+      <DependentUpon>Forum_Baiviet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="forum_DangBai.xaml.cs">
+      <DependentUpon>forum_DangBai.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HoidapPage.xaml.cs">
+      <DependentUpon>HoidapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DanhGiaPage.xaml.cs">
+      <DependentUpon>DanhGiaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LopvaChuongPage_AfterLogin.xaml.cs">
+      <DependentUpon>LopvaChuongPage_AfterLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainForum.xaml.cs">
+      <DependentUpon>MainForum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage_AffterLogin.xaml.cs">
+      <DependentUpon>MainPage_AffterLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NaptienPage.xaml.cs">
+      <DependentUpon>NaptienPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageDanhGia.xaml.cs">
+      <DependentUpon>PageDanhGia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_gioiThieu.xaml.cs">
+      <DependentUpon>Page_gioiThieu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_UserInfo.xaml.cs">
+      <DependentUpon>Page_UserInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistryPage.xaml.cs">
+      <DependentUpon>RegistryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPage.xaml.cs">
+      <DependentUpon>VideoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCoursePage_AfterBuy.xaml.cs">
+      <DependentUpon>ViewCoursePage_AfterBuy.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AdminPage\admin_avatar.png" />
+    <Content Include="Assets\AdminPage\admin_button_backgr.jpg" />
+    <Content Include="Assets\BACKGR.jpg" />
+    <Content Include="Assets\backgr.png" />
+    <Content Include="Assets\backgroundlopvachuong.jpg" />
+    <Content Include="Assets\baithibackground.jpg" />
+    <Content Include="Assets\Baithi\batdauthi.png" />
+    <Content Include="Assets\Baithi\nopbaithi.png" />
+    <Content Include="Assets\Baithi\tamdung.png" />
+    <Content Include="Assets\bar2background.jpg" />
+    <Content Include="Assets\baigiang.png" />
+    <Content Include="Assets\baitap.png" />
+    <Content Include="Assets\baithi.png" />
+    <Content Include="Assets\buycourse_backgr.png" />
+    <Content Include="Assets\end.jpg" />
+    <Content Include="Assets\khoahoc\khampha.png" />
+    <Content Include="Assets\khoahoc\lop1.png" />
+    <Content Include="Assets\khoahoc\lop2.png" />
+    <Content Include="Assets\khoahoc\lop3.png" />
+    <Content Include="Assets\khoahoc\lop4.png" />
+    <Content Include="Assets\khoahoc\lop5.png" />
+    <Content Include="Assets\khoahoc\ontap.png" />
+    <Content Include="Assets\loginbgr.jpg" />
+    <Content Include="Assets\loginrequire.png" />
+    <Content Include="Assets\logo.jpg" />
+    <Content Include="Assets\mainpagebackgr.jpg" />
+    <Content Include="Assets\MainPage\banner.jpg" />
+    <Content Include="Assets\MainPage\banner2.jpg" />
+    <Content Include="Assets\MainPage\banner3.jpg" />
+    <Content Include="Assets\MainPage\banner4.jpg" />
+    <Content Include="Assets\MainPage\logo.png" />
+    <Content Include="Assets\Numbertest\button_1.png" />
+    <Content Include="Assets\Numbertest\button_2.png" />
+    <Content Include="Assets\Numbertest\button_3.png" />
+    <Content Include="Assets\Numbertest\button_4.png" />
+    <Content Include="Assets\Numbertest\button_5.png" />
+    <Content Include="Assets\Numbertest\button_6.png" />
+    <Content Include="Assets\Numbertest\button_7.png" />
+    <Content Include="Assets\Numbertest\button_8.png" />
+    <Content Include="Assets\Numbertest\button_9.png" />
+    <None Include="Connected Services\GetDatabaseServiceReference\kidmathwebservice.disco" />
+    <None Include="Connected Services\GetDatabaseServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\GetDatabaseServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.checkExistsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDataBaiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDatabaiTapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDataChuongResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDataDanhGiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDataDanhSachCauHoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDataKhoaHocResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDataLichSuNapTienResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDatamainForumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDataNguoiDungResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDatathongBaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.GetDatatraLoiForumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDatavideoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.getDatMuaKhoaHocResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidsmath_uwp.GetDatabaseServiceReference.ThucHienLenhResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDatabaseServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Assets\signin_background.jpg" />
+    <Content Include="Assets\StarVote\0.png" />
+    <Content Include="Assets\StarVote\1.png" />
+    <Content Include="Assets\StarVote\2.png" />
+    <Content Include="Assets\StarVote\3.png" />
+    <Content Include="Assets\StarVote\4.png" />
+    <Content Include="Assets\StarVote\5.png" />
+    <Content Include="Assets\usericon.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AdminMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_CourseManagementPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_forum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_MailboxPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_StatisticalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_UserManagementPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BaitapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BaithiPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="binhLuan_Forum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BuyCoursePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Chinhsuakhoahoc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Chinhsuanoidungkhoahoc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forum_Baiviet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="forum_DangBai.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HoidapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DanhGiaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LopvaChuongPage_AfterLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainForum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage_AffterLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NaptienPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageDanhGia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_gioiThieu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_UserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VideoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewCoursePage_AfterBuy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="WinRTXamlToolkit.UWP">
+      <Version>2.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GetDatabaseServiceReference\kidmathwebservice.wsdl" />
+    <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\GetDatabaseServiceReference\" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

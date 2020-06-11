@@ -1,0 +1,213 @@
+﻿<Page
+    x:Class="kidsmath_uwp.AdminMainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#2d2d30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="155*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="169*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Name="Btn_AdPage_AdminAvatar" Height="192" Width="190" 
+                        Grid.Row="0" Margin="35,-52,0,0" VerticalAlignment="Top" Grid.RowSpan="2"
+                        Background="White">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Assets\AdminPage\admin_avatar.png" Stretch="UniformToFill" Margin="60,70,0,0" />
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Text="Admin Managetment Page" 
+                           Margin="25,52,-25,-53" Grid.Row="1"
+                           Foreground="#0073aa"
+                           FontSize="25"/>
+            </Grid>
+            <SplitView Grid.Row="1" OpenPaneLength="370" DisplayMode="CompactInline" Name="splitview_adminpage">
+                <SplitView.Pane>
+                    <StackPanel >
+                        <Button Width="370" Background="#1f1f1f" Name="btn_Showmenu" Click="btnclick_ShowMenu" 
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE700;" 
+                                   Foreground="White" FontWeight="ExtraBold"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="KIDSMATH" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="ExtraBold"
+                                   FontSize="30"/>
+                            </StackPanel>
+                        </Button>
+                        <Grid Height="73" Background="#1f1f1f" Width="385"/>
+                        <Button Width="370" Background="#1f1f1f" Name="btn_MainMenu" Click="btnclick_MainMenu" 
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE10F;" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Trang chủ" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button Width="370" Background="#1f1f1f" Name="btn_UserManagement" Click="btnclick_UserManagement"
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE13D;" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Quản lý người dùng" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30"/>
+                            </StackPanel>
+                            
+                        </Button>
+
+                        <Button Width="370" Background="#1f1f1f" Name="btn_CourseManagement" Click="btnclick_CourseManagement"
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEDA4;" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Quản lý khóa học" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30"/>
+                            </StackPanel>
+                            
+                        </Button>
+
+
+                        <Button Width="370" Background="#1f1f1f" Name="btn_UserComments"  Click="btnclick_UserComments"
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE206;" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Bài viết" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30"/>
+                            </StackPanel>
+                        </Button>
+
+
+                        <Button Width="370" Background="#1f1f1f" Name="btn_Mailbox"  Click="btnclick_Mailbox"
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE166;" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Hòm thư" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button Width="370" Background="#1f1f1f" Name="btn_danhgia"  Click="danhgia"
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE927;" 
+                                           Foreground="White" FontWeight="Thin"
+                                           FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Đánh giá" Margin="7,0,0,0"
+                                           VerticalAlignment="Center" 
+                                           Foreground="White" FontWeight="Thin"
+                                           FontSize="30"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button Width="370" Background="#1f1f1f" Name="btn_Statistical"  Click="btnclick_Statistical"
+                                HorizontalContentAlignment="Left" Height="77">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE9D9;" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Thống kê" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30"/>
+                            </StackPanel>
+                        </Button>
+
+                       
+
+
+                        <Button Width="370" Background="#1f1f1f" Name="btn_Logout"  
+                                HorizontalContentAlignment="Left" Height="77"
+                                Click="btnclick_adpagelogout">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE19C;" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="  Đăng xuất" Margin="7,0,0,0"
+                                   VerticalAlignment="Center" 
+                                   Foreground="White" FontWeight="Thin"
+                                   FontSize="30"/>
+                            </StackPanel>
+                        </Button>
+                        <Grid Height="148" Background="#1f1f1f" Width="385"/>
+
+
+                    </StackPanel>
+                </SplitView.Pane>
+            </SplitView>
+            <TextBlock Grid.Row="1"
+                       Name="Info_adminpage"
+                       Text="Chào mừng đến với KidsMath!
+                             Hãy thiết lập cài đặt riêng của bạn
+                             Nhấn START để bắt đầu
+                             Nếu cần trợ giúp, hãy liên hệ
+                                kidsmath@help.com"
+                                
+                       Foreground="White"
+                       FontSize="30"
+                       TextWrapping="Wrap"
+                       FontWeight="Thin"
+                       TextAlignment="Center" Margin="50,0,46,0"/>
+        </Grid>
+        <Frame Grid.Column="1" Name="Admin_ManagementFrame">
+            <Grid Grid.Column="1" Background="WhiteSmoke" Margin="-35,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="19*"/>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="74*"/>
+                </Grid.RowDefinitions>
+                <Grid Background="#0073aa" Margin="0,150,0,0" Grid.RowSpan="2">
+                    <TextBlock Text="Chào mừng đến với KidsMath!"                                
+                           Foreground="White"
+                           FontSize="50"
+                           TextWrapping="Wrap"
+                           FontWeight="Thin"
+                           TextAlignment="Center" Margin="50,0,15,0"/>
+                    <TextBlock Text="Ứng dụng được thiết kế dựa trên ý tưởng
+                                 từ Website luyenthi123.com"                                
+                           Foreground="White"
+                           FontSize="30"
+                           TextWrapping="Wrap"
+                           FontWeight="Thin"
+                           TextAlignment="Center" Margin="455,85,405,-85"/>
+                </Grid>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</Page>

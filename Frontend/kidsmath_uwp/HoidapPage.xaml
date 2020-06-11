@@ -1,0 +1,141 @@
+﻿<Page
+    x:Class="kidsmath_uwp.HoidapPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets\backgr.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Grid Width="360"/>
+            <StackPanel Width="1200">
+              
+                <Grid Height="26"/>
+                <StackPanel >
+                    <TextBlock Text="Người gửi:"
+                               FontSize="30" Width="582"
+                               />
+                    <Grid Height="10"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE2AF;" 
+                               Foreground="Black" FontWeight="Thin"
+                               FontSize="30" VerticalAlignment="Center" />
+                        <Grid Width="20"/>
+                        <TextBox Text="username"
+                                 FontSize="30" Width="582"
+                                 Name="txtbox_username"
+                                 IsEnabled="False"/>
+                    </StackPanel>
+
+                </StackPanel>
+                <Grid Height="20"/>
+                <StackPanel >
+                    <TextBlock Text="Nhập tiêu đề :"
+                             FontSize="30" Width="582"/>
+                    <Grid Height="10"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xF1CB;" 
+                               Foreground="Black" FontWeight="Thin"
+                               FontSize="30" VerticalAlignment="Center"
+                               />
+                        <Grid Width="20"/>
+                        <TextBox PlaceholderText="VD: Hỏi về giảng viên"
+                                 FontSize="30" Width="582"
+                                 Name="txtbox_tieude"
+                                 Background="White"/>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+
+                <Grid Height="20"/>
+                <StackPanel >
+                    <TextBlock Text="Nhập nội dung:"
+                             FontSize="30" Width="582"/>
+                    <Grid Height="10"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Grid Width="20"/>
+                        <TextBox PlaceholderText="VD: Giảng viên khóa lớp 5 đã được bao nhiêu năm kinh nghiệm"
+                                 FontSize="30" Width="582"
+                                 Name="txtbox_noidung" Height="276"
+                                 TextWrapping="Wrap"
+                                 Background="White"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+               
+
+                <Grid Height="20"/>
+                <StackPanel >
+                    <TextBlock Text="Xác minh bạn không phải Robot:"
+                             FontSize="30" Width="582"/>
+                    <Grid Height="10"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE815;" 
+                               Foreground="Black" FontWeight="Thin"
+                               FontSize="30" VerticalAlignment="Center"
+                               />
+                        <Grid Width="20"/>
+                        <TextBox Text="123124"
+                                 FontSize="30" Width="250"
+                                 Name="txtbox_capcha"
+                                 IsEnabled="False" />
+                        <Grid Width="80"/>
+                        <TextBox PlaceholderText="Nhập CAPCHA"
+                                 Name="txtbox_nhaplaicapcha"
+                                 FontSize="30" Width="250"
+                                 Background="White"/>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+
+                <Grid Height="20"/>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock FontSize="26"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               
+                               Text="1. Thời gian phản hồi thường kéo dài từ 2h - 12h
+                               2. Vui lòng không Spam hòm thư, vi phạm sẽ khóa TK
+                               3. Liên hệ qua SĐT 0123123123 để được hỗ trợ trực tiếp
+                               4. Mọi thắc mắc gửi đến địa chỉ:  kidmath@help.com 
+                               " Width="753">
+
+                    </TextBlock>
+                </StackPanel>
+
+                <Grid Height="20"/>
+                <StackPanel HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button Content="Gửi đi" Height="64"
+                            Click="naptien_xacnhannap"
+                            Width="270"
+                            FontSize="30" RenderTransformOrigin="0.872,0.469"/>
+                    <Grid Width="80"/>
+                    <Button Content="Về Trang chủ" Height="64" 
+                            Width="270"
+                            FontSize="30"
+                            Click="naptien_vetrangchu"/>
+                </StackPanel>
+
+
+            </StackPanel>
+            <Grid Width="360"/>
+        </StackPanel>
+    </Grid>
+</Page>

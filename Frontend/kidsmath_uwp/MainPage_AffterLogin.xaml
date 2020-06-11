@@ -1,0 +1,289 @@
+﻿<Page
+    x:Class="kidsmath_uwp.MainPage_AffterLogin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kidsmath_uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="2000" Width="1920">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid Height="3082" Background="WhiteSmoke">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="88"/>
+                <RowDefinition Height="670"/>
+                <RowDefinition Height="87"/>
+                <RowDefinition Height="431"/>
+                <RowDefinition Height="182"/>
+                <RowDefinition Height="460"/>
+                <RowDefinition Height="104"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"
+                        Background="#007791">
+                <Grid Height="15"/>
+                <StackPanel HorizontalAlignment="Center"  
+                            Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Center"
+                           Text="Ứng dụng báo cáo cuối kỳ tại VTC Academy"
+                           FontSize="15"
+                           FontWeight="Bold"
+                           Foreground="White"/>
+                    <TextBlock HorizontalAlignment="Center"
+                           Text="| Hoàn thành bởi Nguyễn Mạnh Quỳnh lớp AD10"
+                           FontSize="15"
+                           Foreground="White"/>
+                </StackPanel>
+                <Grid Height="15"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Background="White" >
+                <Grid Height="10"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="1500">
+                    <Grid Width="105"/>
+                    <Image Width="120" Height="60" Source="Assets\MainPage\logo.png" Stretch="Fill"/>
+                    <Button Width="160"
+                            Background="White"
+                            HorizontalContentAlignment="Left" Height="77">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                            <TextBlock 
+                                   FontFamily="Segoe MDL2 Assets" Text="&#xE292;"                                    
+                                   FontSize="30" VerticalAlignment="Center"/>
+                            <TextBlock Text="  Khóa học" 
+                                   VerticalAlignment="Center" 
+                                   FontWeight="Medium"
+                                   FontSize="20"/>
+                        </StackPanel>
+                    </Button>
+                    <Grid Width="2"/>
+                    <StackPanel>
+                        <Grid Height="20"/>
+                        <StackPanel Orientation="Horizontal">
+
+                            <AutoSuggestBox Width="400"
+                                    Height="35"
+                                    PlaceholderText="Tìm kiếm khóa học"
+                                     Name="txtSearch" 
+                              TextChanged="txtSearch_TextChanged"
+                                QuerySubmitted="txtSearch_QuerySubmitted"
+>
+                            </AutoSuggestBox>
+                            <Button FontFamily="Segoe MDL2 Assets" Content="&#xE0AE;" 
+                                   FontWeight="ExtraBold"
+                                   Foreground="#ea5252"
+                                   Height="35" 
+                                   FontSize="16" 
+                                   BorderThickness="0"
+                                    Click="gotobuycourse"
+                                   />
+                        </StackPanel>
+                    </StackPanel>
+                    <Grid Width="30"/>
+                   
+                    <Grid Width="2"/>
+                    <StackPanel Width="104" IsTapEnabled="True"
+                                Tapped="navigate_diendan">
+                        <Grid Height="25"/>
+                        <TextBlock Text="Diễn đàn"
+                               Foreground="Black"
+                               FontSize="18" Width="200"
+                               FontWeight="Bold"/>
+                    </StackPanel>
+                    <Grid Width="2"/>
+                    <StackPanel>
+                        <Grid Height="15"/>
+                        <TextBlock Text="|"
+                               Foreground="Black"
+                               FontSize="28" Width="21"
+                               FontWeight="Bold"/>
+                    </StackPanel>
+
+                    <Grid Width="2"/>
+                    <StackPanel>
+                        <Grid Height="15"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="Xin chào:"
+                                    Name ="User_btn"
+                                    FontSize="12"
+                                    FontWeight="ExtraBold" Height="45" Width="282"
+                                    Click="mainpage_click_dangky"/>
+                            <Grid Width="10"/>
+                            <Button Content="Đăng xuất"
+                                    Foreground="White"
+                                    Background="Black"
+                                    FontSize="12"
+                                    FontWeight="ExtraBold" Height="45" Width="87"
+                                    Click="mainpage_click_dangnhap"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+
+
+
+                </StackPanel>
+                <Grid Height="10"/>
+            </StackPanel>
+            <Grid Grid.Row="2">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Assets\MainPage\banner.jpg" Opacity="0.7"/>
+                </Grid.Background>
+                <StackPanel>
+                    <Grid Height="200" />
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Width="1200"/>
+                        <TextBlock Text="Học trực tuyến tại nhà"
+                               FontSize="40"
+                               FontWeight="ExtraBold"
+                               Foreground="White"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Width="1200"/>
+                        <TextBlock Text="Học bất kỳ môn nào, bất kỳ thời gian nào
+                                   Chỉ cần 1 thiết bị như Laptop hay điện thoại..."
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"
+                                   Width="405"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Width="1200"/>
+                        <AutoSuggestBox Width="400"
+                                    Height="35"
+                                    PlaceholderText="Bạn muốn học gì ?"
+                                    >
+                        </AutoSuggestBox>
+                        <TextBox FontFamily="Segoe MDL2 Assets" Text="&#xE71E;" 
+                                   FontWeight="ExtraBold"
+                                   Foreground="#ea5252"
+                                   Height="26" 
+                                   FontSize="16" 
+                                   BorderThickness="0" Width="35"
+                                   />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="3">
+                <Image Source="Assets\MainPage\banner2.jpg" Stretch="UniformToFill"/>
+            </StackPanel>
+
+            <GridView Grid.Row="4" Name="flipview_dskhoahoc" Background="WhiteSmoke"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollMode="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+            ScrollViewer.VerticalScrollMode="Disabled" Margin="0,6,0,5">
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <ScrollViewer HorizontalScrollMode="Enabled" VerticalScrollBarVisibility="Visible">
+                            <Border BorderThickness="2" BorderBrush="White" Width="309" Height="394">
+                                <StackPanel Orientation="Horizontal" Width="309" Height="394"
+                                    HorizontalAlignment="Center"
+                                    Name="khoahoc_stackpn"
+                                    Tapped="tap_khoahoc"
+                                            IsTapEnabled="True">
+                                    <StackPanel Height="292" Width="394">
+                                        <Image Width="390" Height="173" Stretch="UniformToFill"
+                                       Source="{Binding imagelink}"/>
+                                        <Grid Height="5"/>
+                                        <TextBlock Width="390" Height="38" 
+                                           TextWrapping="Wrap"
+                                           FontWeight="Bold"
+                                           FontSize="18"
+                                           Text="{Binding tenKhoaHoc}"/>
+                                        <Grid Height="1"/>
+                                        <TextBlock Width="390" Height="28" 
+                                           TextWrapping="Wrap"
+                                           FontWeight="Normal"
+                                           FontSize="16"
+                                           Text="{Binding tenGiaoVien}"/>
+                                        <Grid Height="5"/>
+                                        <TextBlock Width="390" Height="28" 
+                                           TextWrapping="Wrap"
+                                           FontWeight="Normal"
+                                           FontSize="16"
+                                           Text="{Binding giaKhuyenMaiHienThi}"/>
+                                        <Grid Height="5"/>
+                                        <TextBlock Width="390" Height="38" 
+                                           HorizontalAlignment="Right"
+                                           FontWeight="Bold"
+                                           FontSize="25"
+                                           Text="{Binding thoiGianKhuyenMai}"/>
+                                    </StackPanel>
+                                    <Grid Width="17" Height="394"/>
+                                </StackPanel>
+                            </Border>
+                        </ScrollViewer>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+            <StackPanel Grid.Row="5">
+                <Image Source="Assets\MainPage\banner3.jpg" Stretch="UniformToFill"/>
+            </StackPanel>
+            <Grid Grid.Row="6" Margin="210,47,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Grid Height="20"/>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Tham gia cộng đồng KidsMath"
+                                   FontSize="30"
+                                   FontWeight="Bold"
+                                   Foreground="#2b2a27"/>
+                        <Grid Height="20"/>
+                        <TextBlock Text="Chúng tôi có một cộng đồng gồm các học sinh, phụ huynh
+                                   đang và đã sử dụng các dịch vụ từ Kidmaths.
+                                   Tham gia trao đổi và thảo luận tại diễn đàn"                  
+                                   FontSize="20"
+                                   TextWrapping="Wrap"
+                                   FontWeight="Bold"
+                                   Foreground="#2b2a27" Height="115" Width="559"/>
+                        <Button Content="Diễn đàn"
+                                    FontSize="20"
+                                    FontWeight="ExtraBold" Height="65" Width="287"
+                                    Click="mainpage_click_lienhegiangday"/>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Grid.Column="1">
+                    <Grid Height="20"/>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Bạn có câu hỏi ?"
+                                   FontSize="30"
+                                   FontWeight="Bold"
+                                   Foreground="#2b2a27"/>
+                        <Grid Height="20"/>
+                        <TextBlock Text="Chúng tôi luôn đón nhận những đóng góp
+                                   và câu hỏi từ tất cả mọi người. Hãy cho chúng tôi biết cảm nhận của bạn về KidsMath hoặc gửi câu hỏi của bạn tới chúng tôi.
+"                  
+                                   FontSize="20"
+                                   TextWrapping="Wrap"
+                                   FontWeight="Bold"
+                                   Foreground="#2b2a27" Height="115" Width="462"/>
+                        <Button Content="Gửi câu hỏi"
+                                    FontSize="20"
+                                    FontWeight="ExtraBold" Height="65" Width="287"
+                                    Click="mainpage_click_donggopykien"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Grid.Row="7">
+                <Image Source="Assets\MainPage\banner4.jpg" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+
+</Page>
